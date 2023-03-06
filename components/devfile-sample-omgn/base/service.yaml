@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-omgn
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-omgn
+    app.kubernetes.io/part-of: e2e-nodejs
+  name: devfile-sample-omgn
+  namespace: e2e-demos-tbhv-tenant
+spec:
+  ports:
+  - port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: devfile-sample-omgn
+status:
+  loadBalancer: {}
